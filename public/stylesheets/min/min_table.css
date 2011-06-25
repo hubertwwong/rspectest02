@@ -1,0 +1,15 @@
+/*
+ * basic tables styling.
+ */
+
+table {
+	margin: 0px;
+}
+
+table * tr th {
+	padding: 5px;
+}
+
+table * tr td {
+	padding: 5px;
+}

@@ -1,0 +1,18 @@
+<h6>followers:</h6><br/>
+
+<% if @followers.size > 0 %>
+	<% @followers.each do |f| %>
+		<div class="user basic_item grid_9 alpha">
+			<p class="headline"><%= f.username %></p>
+		</div>
+	<% end %>
+	<%= paginate @followers %> 
+<% else %>
+	You currently have no followers.
+<% end %>
+
+<!-- side bar -->
+<% content_for :sidebar do %>
+	<%= render "shared/tweet_and_user_links" %>
+	<%= render "shared/follower_stats" %>
+<% end %>

@@ -1,0 +1,109 @@
+/*
+ * basic fonts for the page.
+ */
+
+body {
+	font-size: 1.00em;
+	font-family: Georgia, serif;
+}
+
+pre,
+code {
+	font-family: 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid #CCC;
+	margin: 10px;
+}
+
+/*
+ * PARAGRAH STLE FONTS.
+ */
+p.headline {
+	font-size: 2.1em;
+	color: #000000;
+}
+
+p.subtitle {
+	font-size: 0.8em;
+	color: #000000;
+}
+
+/*
+ * HEADINGS
+ */
+
+h1 {
+	font-size: 2.30em;
+}
+
+h2 {
+	font-size: 2.10em;
+}
+
+h3 {
+	font-size: 1.90em;
+}
+
+h4 {
+	font-size: 1.70em;
+}
+
+h5 {
+	font-size: 1.50em;
+}
+
+h6 {
+	font-size: 1.30em;
+}
+
+/*
+ * LIST
+ */
+ul, ol {
+	margin:auto -3em 1em 0;
+	padding:0;
+	position:relative;
+	left:-3em;
+	overflow:hidden;
+}
+li {
+	margin-top:0.25em;
+	margin-bottom:0.25em;
+}
+ul ul, ul ol,
+ol ol, ol ul {
+	margin-left:1em;
+	padding-left:0;
+}
+ul li, ol li {
+	margin-left:5em;
+}
+li li {
+	margin-left:1em;
+}
+ 
+/*
+ * SPACING.
+ * my intial guess here is that the font spacing should be 0px
+ */
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset,
+figure {
+	margin:0px;
+}

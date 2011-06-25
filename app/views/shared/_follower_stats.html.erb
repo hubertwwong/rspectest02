@@ -1,0 +1,11 @@
+<div class="grid_3 omega">
+	<h6>Stats</h6><br/>
+	following:
+	<%= link_to current_user.following.size, following_relationship_path(current_user.id) %><br/>
+
+	followers:
+	<%= link_to current_user.followers.size, followers_relationship_path(current_user.id) %><br/>
+	
+	<br/>
+</div>
+<div class="clear"></div>

@@ -1,0 +1,17 @@
+<!-- 
+	debug
+
+	to turn on this view, add a @debug_partial=true in the controller.
+ -->
+<% if @debug_partial == true %>
+	<div class="grid_12" id="nav_debug">
+		<h6>debug params</h6><br/>
+		<%= debug params %><br/>
+		
+		<h6>debug flash</h6><br/>
+		<%= debug flash %>
+
+		<h6>your debugging stuff</h6>
+		<%= yield :debug_footer %>
+	</div>
+<% end %>

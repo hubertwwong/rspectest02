@@ -1,0 +1,20 @@
+<!-- 
+	refactoring form partial to have error message saved in one place
+	obj = the object that is returning the errors.
+
+	call this object like this...
+	this assumes that @tweet was your instance variable that you were using in the form.
+	render :partial => "shared/errors", :locals => { :obj => @tweet }
+-->
+
+<% if obj.errors.any? %>
+<div class="simple_error_explanation">
+	<h6><%= pluralize(obj.errors.count, "error") %> prohibited this bar from being saved:</h6>
+	<ul>
+		<% obj.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
+	</ul>
+</div>
+<br/>
+<% end %>

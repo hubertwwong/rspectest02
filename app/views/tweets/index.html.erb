@@ -1,0 +1,16 @@
+<!-- form to enter new tweets -->
+<%= render 'form_thin' %>
+
+<!-- just a note to self.-->
+<!-- 
+	render @tweets performs this magic.
+	render :partial => "tweet", :collection => @tweets  
+-->
+<%= render @tweets %><br/>
+<%= paginate @tweets %> 
+
+<!-- side bar -->
+<% content_for :sidebar do %>
+	<%= render "shared/tweet_and_user_links" %>
+	<%= render "shared/follower_stats" %>
+<% end %>

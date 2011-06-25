@@ -1,0 +1,82 @@
+/*
+ * basic forms.
+ *
+ * just a note... this assumes 960 px and reset css is being used
+ * 
+ * in 960....
+ * 60px for 1 grid
+ * 20px for 1 gap.
+ * 
+ * a form label is basically grid_2 (140px)
+ * a form input area is grid_4 (300px)
+ * buttons like submit are aligned with the input area.
+ * 
+ * this assumes that your forms are in this format..
+ * 
+ * form
+ * -- div
+ * ---- label
+ * ---- input
+ */
+ 
+form.simple div {
+	margin: 0px;
+}
+ 
+form.simple fieldset div legend {
+	margin-left: 160px;
+	margin-bottom: 4px;@tweets = current_user.tweets.order("created_at DESC").page(params[:page]).per(10)
+}
+
+form.simple div label {
+	width: 140px;
+	float: left;
+	text-align: right;
+	margin-right: 20px;
+	margin-bottom: 4px;
+	display: block
+}
+
+form.simple div input[type="text"],
+form.simple div input[type="textarea"] {
+	width: 300px;
+	margin-bottom: 4px;
+}
+
+form.simple div input[type="submit"] {
+	margin-left: 160px;
+	margin-bottom: 4px;
+}
+
+/*
+ * errors
+ */
+
+div.simple_error_explanation {
+	margin: 0px;
+	border: 1px solid #FF0000;
+}
+
+div.simple_error_explanation h6 {
+	color: #FFFFFF;
+	background-color: #FF0000;
+}
+
+
+/*
+ * search bar
+ */
+form.search_bar div {
+	margin: 0px;
+}
+
+form.search_bar div input[type="text"] {
+	margin: 0px;
+	width: 80%;
+	float: left;
+}
+
+form.search_bar div input[type="submit"] {
+	margin: 0px;
+	width: 18%;
+}

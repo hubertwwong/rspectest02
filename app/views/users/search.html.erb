@@ -1,0 +1,18 @@
+<!-- loading page specific css -->
+
+<h6>search for other users</h6>
+
+<% content_for :css_header do %>
+	<%= stylesheet_link_tag "user" %>
+<% end %>
+
+<%= render 'form' %><br/>
+
+<%= render @users %>
+<%= paginate @users %> 
+
+<!-- side bar -->
+<% content_for :sidebar do %>
+	<%= render "shared/tweet_and_user_links" %>
+	<%= render "shared/follower_stats" %>
+<% end %>

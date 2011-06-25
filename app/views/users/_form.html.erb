@@ -1,0 +1,7 @@
+<%= form_tag(search_users_path, :method => "get", :class => 'search_bar') do %>
+	<div>
+		<%= text_field_tag(:username) %>
+		<%= submit_tag("Search") %>
+	</div>
+<% end %>
+<br/>

@@ -1,0 +1,32 @@
+<!-- loading page specific css -->
+<% content_for :css_header do %>
+	<%= stylesheet_link_tag "tweet" %>
+<% end %>
+
+<div>
+	<h6><%= @user.username %></h6>
+	<% if current_user.id == @user.id %>
+		hi... me
+	<% elsif current_user.following?(@user) %>
+		you are following this user.
+		(<%= link_to "unfollow", relationship_path(@relationship), :method => "delete" %>)
+	<% else %>
+		you are not following this user.
+		(<%= link_to "follow", relationships_path(:followed_id => @user), :method => "post" %>)
+	<% end %>
+	<br/><br/>
+</div>
+
+<%= render :partial => "tweets/tweet", :collection => @tweets %>
+<%= paginate @tweets %> 
+
+<!-- side bar -->
+<% content_for :sidebar do %>
+	<%= render "shared/tweet_and_user_links" %>
+	<%= render "shared/follower_stats" %>
+<% end %>
+
+<!-- debug footer-->
+<% content_for :debug_footer do %>
+	previous links: <%= debug request.referer %>
+<% end %>

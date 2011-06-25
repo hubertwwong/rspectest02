@@ -1,0 +1,24 @@
+<h6>following:</h6><br/>
+
+<% if @following.size > 0 %>
+	<% @following.each do |f| %>
+		<div class="user basic_item grid_9 alpha">
+			<p class="headline"><%= f.username %>
+			(<%= link_to "unfollow", relationship_path(current_user.relationships.find_by_followed_id(f.id)), :method => "delete" %>)</p>
+		</div>
+	<% end %>
+	<%= paginate @following %>
+<% else %>
+	You are not following anyone at the moment.
+<% end%>
+
+<!-- side bar -->
+<% content_for :sidebar do %>
+	<%= render "shared/tweet_and_user_links" %>
+	<%= render "shared/follower_stats" %>
+<% end %>
+
+<!-- debug footer-->
+<% content_for :debug_footer do %>
+	previous links: <%= debug request.referer %><br/>
+<% end %>

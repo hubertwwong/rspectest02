@@ -1,0 +1,23 @@
+<!--
+  A simple layout of for this website.
+  all of the main elements are in partials in the same directory.
+-->
+<html lang="en">
+
+<head>
+    <%= render :partial => "layouts/html_head" %>
+</head>
+
+<body>
+
+<div class="container_12">
+    <%= render :partial => "layouts/nav_header" %>
+    <%= render :partial => "layouts/nav_main" %>
+    <%= render :partial => "layouts/nav_side" %>
+    <%= render :partial => "layouts/nav_footer" %>
+	<%= render :partial => "layouts/nav_debug" %>
+</div>
+
+</body>
+
+</html>

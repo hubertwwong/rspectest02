@@ -1,0 +1,45 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>app title</title>
+
+<!-- reset. basically this stylesheet blank out all styles.-->
+<%= stylesheet_link_tag "960gs/reset" %>
+
+<!-- rails stuff -->
+<!-- note about the :all. inits all stylesheets in the stylesheet folder -->
+<%= csrf_meta_tag %>
+
+<!-- load application, jquery, and rails.js -->
+<!-- note that jquery has to come first -->
+<!-- 
+	simpliest way to install is to include the jquery-rails gem.
+	and install by typing rails g jquery:install
+	the other way is to wait for rails 3.1
+	that should include rails by default.
+-->
+<%= javascript_include_tag "jquery.min.js" %>
+<%= javascript_include_tag "jquery_ujs.js" %>
+<%= javascript_include_tag "application" %>
+
+<!-- 
+	allows user to include additional javascript libraries and / or scripts
+	using the content_for :js_header tag from your views.
+-->
+<%= yield :js_header %>
+
+<!-- 
+	allows you to load custom css per controller.
+	user the content_for...
+
+	leave it here for now.
+-->
+<%= yield :css_header %>
+
+<!-- 960px stuff -->
+<%= stylesheet_link_tag "960gs/960" %>
+
+<!-- css customizations off 960px -->
+<%= stylesheet_link_tag "min/min_layout" %>
+<%= stylesheet_link_tag "min/min_text" %>
+<%= stylesheet_link_tag "min/min_form" %>
+<%= stylesheet_link_tag "min/min_table" %>
+<%= stylesheet_link_tag "min/min_error" %>

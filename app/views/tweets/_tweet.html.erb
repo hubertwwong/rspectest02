@@ -1,0 +1,4 @@
+<div class="tweet basic_item">
+	<p class="headline"><%= tweet.content %></p>
+	<p class="subtitle">by (<%= tweet.user.username %>) at <%= local_time(tweet.created_at) %> | <%= local_date(tweet.created_at) %></p>
+</div>

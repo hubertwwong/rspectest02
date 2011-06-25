@@ -1,0 +1,12 @@
+<%= form_for(@tweet, :html => { :class => 'simple' }) do |f| %>
+	<!-- errors -->
+	<%= render :partial => "shared/errors", :locals => { :obj => @tweet } %>
+
+	<div class="search_field">
+		<%= f.label :content %>
+		<%= f.text_field :content %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>
